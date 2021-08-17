@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
 
-def parse_requirements(filename):
-    """ load requirements from a pip requirements file """
-    lineiter = (line.strip() for line in open(filename))
-    return [line for line in lineiter if line and not line.startswith("#")]
+# def parse_requirements(filename):
+#     """ load requirements from a pip requirements file """
+#     lineiter = (line.strip() for line in open(filename))
+#     return [line for line in lineiter if line and not line.startswith("#")]
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='RachelCore',
     packages=find_packages(),
-    version='0.0.3',
+    version='0.0.4',
     author='Amirhossein Mohammadi',
     license='MIT',
     author_email="amirhosseinmohammadi1380@yahoo.com",
@@ -19,5 +19,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/BlackIQ/RachelCore",
-    install_requires=parse_requirements("requirements.txt")
+    install_requires=[
+        "requests==2.25.1",
+        "googlesearch-python==1.0.1"
+    ]
 )
