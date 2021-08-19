@@ -9,6 +9,8 @@
 
 import os
 import webbrowser
+from builtins import staticmethod
+
 import googlesearch
 from time import *
 import random
@@ -48,6 +50,7 @@ class start:
     def hello():
         # Returns answers fot hello
         print()
+
 
 class close:
     """
@@ -117,13 +120,36 @@ class software:
             pass
 
 
-def search_in_net(text):
-    results = googlesearch.search(text)
-    i = 0
-    for result in results:
-        print(f"[{i}]" + result)
-        i += 1
-    num = input('\n[?] Insert number to open url in browser : ')
-    if num:
-        webbrowser.open(results[int(num)])
-    return ''
+class internet:
+    """
+        Internet class
+        search in the internet and other functions
+    """
+
+    @staticmethod
+    def search_in_net(text):
+        results = googlesearch.search(text)
+        i = 0
+        for result in results:
+            print(f"[{i}]" + result)
+            i += 1
+        num = input('\n[?] Insert number to open url in browser: ')
+        if num:
+            webbrowser.open(results[int(num)])
+        return ''
+
+
+class command:
+    """
+        Command class
+        Get command and other things
+    """
+
+    @staticmethod
+    def get(command):
+        if "update" in command:
+            software.update()
+        elif "uninstall" in command:
+            software.uninstall()
+        else:
+            internet.search_in_net(command)
