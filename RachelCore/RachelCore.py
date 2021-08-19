@@ -129,6 +129,7 @@ class internet:
 
     @staticmethod
     def search_in_net(text):
+        # Search in the internet
         results = googlesearch.search(text)
         i = 0
         for result in results:
