@@ -97,14 +97,15 @@ class software:
         Uninstall, Update and other software methods are here
     """
 
-    version = 'Version'
+    version = 'version'
 
     @staticmethod
     def uninstall():
         # Uninstalling
         uninstall_question = input("Uninstall Rachel? y/n ")
         if lower(uninstall_question) == 'y':
-            os.system("rm -rf /bin/Rachel ~/.Rachel")
+            print("I had a nice time with you! Bye :(")
+            os.system("sudo rm -rf /bin/Rachel ~/.Rachel")
         else:
             print("Thanks god!")
 
@@ -157,4 +158,3 @@ class command:
                 internet.search_in_net(command)
             else:
                 pass
-            
