@@ -11,7 +11,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='RachelCore',
     packages=find_packages(),
-    version='0.0.5',
+    version='0.0.6',
     author='Amirhossein Mohammadi',
     license='MIT',
     author_email="amirhosseinmohammadi1380@yahoo.com",
