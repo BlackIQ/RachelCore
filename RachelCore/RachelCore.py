@@ -54,6 +54,12 @@ class close:
     """
 
     @staticmethod
+    def close():
+        # Close Rachel
+        print("Have fun!")
+        quit()
+
+    @staticmethod
     def bye():
         # Returns answers for bye
         print()
@@ -96,7 +102,8 @@ class software:
     @staticmethod
     def update():
         # Updating
-        print()
+        os.system("pip install RachelCore --upgrade")
+        print("\nRachel updated. Reboot Rachel.")
 
 
 def search_in_net(text):
