@@ -152,4 +152,9 @@ class command:
         elif "uninstall" in command:
             software.uninstall()
         else:
-            internet.search_in_net(command)
+            search_question = input("Sorry, I didn't understand. Do you me to search it in internet? y/n ")
+            if lower(search_question) == 'y':
+                internet.search_in_net(command)
+            else:
+                pass
+            
