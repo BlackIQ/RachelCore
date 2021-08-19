@@ -13,6 +13,8 @@ import googlesearch
 from time import *
 import random
 import requests
+from soupsieve.util import lower
+
 
 class dt:
     """
@@ -97,13 +99,22 @@ class software:
     @staticmethod
     def uninstall():
         # Uninstalling
-        print()
+        uninstall_question = input("Uninstall Rachel? y/n ")
+        if lower(uninstall_question) == 'y':
+            os.system("rm -rf /bin/Rachel ~/.Rachel")
+        else:
+            print("Thanks god!")
 
     @staticmethod
     def update():
         # Updating
         os.system("pip install RachelCore --upgrade")
-        print("\nRachel updated. Reboot Rachel.")
+        print("\nRachel updated.")
+        reboot_question = input("Reboot Rachel? y/n ")
+        if lower(reboot_question) == 'y':
+            close.close()
+        else:
+            pass
 
 
 def search_in_net(text):
