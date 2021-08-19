@@ -7,15 +7,15 @@
     https://github.com/BlackIQ/RachelCore
 """
 
-import os
-import webbrowser
 from builtins import staticmethod
+from soupsieve.util import lower
 
 import googlesearch
-from time import *
-import random
+import webbrowser
 import requests
-from soupsieve.util import lower
+import random
+import time
+import os
 
 
 class dt:
