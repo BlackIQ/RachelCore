@@ -148,7 +148,12 @@ class command:
     """
 
     @staticmethod
-    def get(command):
+    def get():
+        entrance = input("What can I do for you? ")
+        command.handle(entrance)
+
+    @staticmethod
+    def handle(command):
         if "update" in command:
             software.update()
         elif "uninstall" in command:
