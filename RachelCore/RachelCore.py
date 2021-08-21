@@ -15,6 +15,7 @@ import webbrowser
 import requests
 import random
 import time
+import sys
 import os
 
 
@@ -113,12 +114,7 @@ class software:
     def update():
         # Updating
         os.system("pip install RachelCore --upgrade")
-        print("\nRachel updated.")
-        reboot_question = input("Reboot Rachel? y/n ")
-        if lower(reboot_question) == 'y':
-            close.close()
-        else:
-            pass
+        print("\nRachel updated. Reboot Rachel later.")
 
 
 class internet:
@@ -164,3 +160,10 @@ class command:
                 internet.search_in_net(command)
             else:
                 pass
+
+
+try:
+    if sys.argv[1] == "--update":
+        software.update()
+except:
+    pass
