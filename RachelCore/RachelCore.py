@@ -167,5 +167,7 @@ try:
         software.update()
     if sys.argv[1] == "--uninstall":
         software.uninstall()
+    if sys.argv[1] == "version":
+        print(software.version)
 except:
     pass
