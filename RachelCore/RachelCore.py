@@ -165,5 +165,7 @@ class command:
 try:
     if sys.argv[1] == "--update":
         software.update()
+    if sys.argv[1] == "--uninstall":
+        software.uninstall()
 except:
     pass
