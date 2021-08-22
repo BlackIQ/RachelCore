@@ -161,13 +161,14 @@ class command:
             else:
                 pass
 
-
-try:
-    if sys.argv[1] == "--update":
-        software.update()
-    if sys.argv[1] == "--uninstall":
-        software.uninstall()
-    if sys.argv[1] == "version":
-        print(software.version)
-except:
-    pass
+    @staticmethod
+    def inline():
+        try:
+            if sys.argv[1] == "--update":
+                software.update()
+            if sys.argv[1] == "--uninstall":
+                software.uninstall()
+            if sys.argv[1] == "version":
+                print(software.version)
+        except:
+            pass
